@@ -37,9 +37,9 @@
         </div>
 
         <nav class="right-nav">
-          <a onclick="showInner('chi-sono')">Chi sono?</a>
-          <a onclick="showInner('trattamenti')">Trattamenti</a>
-          <a onclick="showInner('contatti')">Contatti</a>
+       <a href="#" onclick="showInner('chi-sono'); return false;">Chi sono?</a>
+       <a href="#" onclick="showInner('trattamenti'); return false;">Trattamenti</a>
+       <a href="#" onclick="showInner('contatti'); return false;">Contatti</a>
         </nav>
       </div>
     </div>
@@ -389,54 +389,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ═════════════════ JAVASCRIPT ═════════════════ -->
-    <script>
-      function showInner(id) {
-        const home = document.getElementById("page-home");
-
-        home.style.opacity = "0";
-        setTimeout(() => {
-          home.style.display = "none";
-        }, 400);
-
-        document.querySelectorAll(".inner-page").forEach((page) => {
-          page.classList.remove("visible");
-          page.style.display = "none";
-        });
-
-        const target = document.getElementById("page-" + id);
-
-        target.style.display = "block";
-        target.getBoundingClientRect();
-        target.classList.add("visible");
-        target.scrollTop = 0;
-      }
-
-      function goHome() {
-        document.querySelectorAll(".inner-page").forEach((page) => {
-          page.classList.remove("visible");
-
-          setTimeout(() => {
-            page.style.display = "none";
-          }, 400);
-        });
-
-        const home = document.getElementById("page-home");
-
-        home.style.display = "flex";
-        home.getBoundingClientRect();
-        home.style.opacity = "1";
-      }
-
-      document.getElementById("page-home").addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 10;
-        const y = (e.clientY / window.innerHeight - 0.5) * 7;
-
-        document.querySelector(
-          "#page-home .bg"
-        ).style.transform = `translate(${x}px, ${y}px) scale(1.03)`;
-      });
-    </script>
+<script src="script.js"></script>
   </body>
 </html>
