@@ -975,23 +975,28 @@ body {
     font-size: 0.7rem;
     letter-spacing: 0.22em;
   }
- #page-home .right-nav {
-  position: absolute;
-  left: 50%;
-  bottom: 4rem;
-  transform: translateX(-50%);
-  z-index: 9999;
+#page-home .right-nav {
+  position: relative;
+  margin-top: 5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
+
+  z-index: 9999;
 }
 
 #page-home .right-nav a {
-  font-size: 0.9rem;
-  letter-spacing: 0.28em;
-  color: #fff;
-  white-space: nowrap;
+  display: inline-block;
+  font-size: 0.95rem;
+  letter-spacing: 0.24em;
+
+  padding: 0.4rem 1rem;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  -webkit-tap-highlight-color: transparent;
 }
 }
