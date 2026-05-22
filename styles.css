@@ -711,6 +711,10 @@ body {
    MOBILE RESPONSIVE
 ========================= */
 
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 767px) {
   .page,
   .page.visible {
@@ -718,20 +722,66 @@ body {
     min-height: 100svh;
   }
 
-  .page-inner {
-    padding: 2rem 1.4rem;
+  /* HOME */
+  #page-home .page-inner {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    padding: 2.2rem 1.4rem;
+    position: relative;
   }
 
-  .quote {
-    position: absolute;
-    top: 4.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 82%;
+  #page-home .right-nav {
+    order: 1;
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+
+    z-index: 999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    margin-bottom: 4rem;
+    pointer-events: auto !important;
+  }
+
+  #page-home .right-nav button {
+    display: block;
+    position: relative;
+    z-index: 9999999;
+
+    background: none;
+    border: none;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: #fff;
+
+    padding: 1rem 0.35rem;
+    min-height: 44px;
+
+    cursor: pointer;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+
+  #page-home .quote {
+    order: 2;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: 88%;
+    margin-bottom: 7rem;
+    z-index: 2;
+    pointer-events: none !important;
   }
 
   .quote-text {
@@ -744,8 +794,11 @@ body {
     margin-top: 0.45rem;
   }
 
-  .hero-center {
-    margin-top: 2.5rem;
+  #page-home .hero-center {
+    order: 3;
+    position: relative;
+    z-index: 2;
+    pointer-events: none !important;
   }
 
   .hero-name {
@@ -760,49 +813,67 @@ body {
     margin-top: 0.45rem;
   }
 
+  #page-home .bg,
+  #page-home .bg::after {
+    pointer-events: none !important;
+    z-index: 0;
+  }
+
   .bg::after {
     background: rgba(4, 8, 35, 0.22);
   }
 
+  /* INNER PAGES NAV */
   .inner-page {
     padding-top: 1.5rem;
   }
 
+  .back-btn {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: inline-block;
+    margin: 1rem 0 2rem 1.2rem;
+    z-index: 20;
+  }
+
+  .inner-right-nav {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+    margin: 0 0 2rem;
+    z-index: 20;
+  }
+
+  .inner-right-nav button {
+    background: none;
+    border: none;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: #897C79;
+
+    cursor: pointer;
+    padding: 0.5rem 0.2rem;
+  }
+
+  /* CHI SONO */
   #page-chi-sono {
     display: flex;
     flex-direction: column;
   }
 
-  .back-btn {
-    order: 1;
-    position: relative;
-    top: auto;
-    left: auto;
-    z-index: 20;
-    display: inline-block;
-    margin: 1rem 0 2.8rem 1.2rem;
-  }
-
-  .inner-right-nav {
-    order: 2;
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 0 0 1.5rem;
-  }
-
-  .inner-right-nav a {
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-  }
-
   #Lav-pic {
-    order: 3;
     position: relative;
     width: 68%;
     margin: 0 auto 2rem;
@@ -825,7 +896,6 @@ body {
   }
 
   .inner-content {
-    order: 4;
     padding: 1.5rem;
   }
 
@@ -847,6 +917,7 @@ body {
     font-size: 0.98rem;
   }
 
+  /* TRATTAMENTI */
   #page-trattamenti .section-overline,
   #page-trattamenti .section-title,
   .trattamenti-content {
@@ -921,6 +992,7 @@ body {
     max-width: 100%;
   }
 
+  /* CONTATTI */
   #page-contatti .section-title {
     font-size: 2.4rem;
     letter-spacing: 0.18em;
@@ -960,55 +1032,5 @@ body {
     font-size: 0.7rem;
     letter-spacing: 0.22em;
   }
-#page-home .page-inner {
-  justify-content: flex-start;
-  padding: 2.2rem 1.4rem;
-}
 
-#page-home .right-nav {
-  order: 1;
-  position: relative !important;
-  top: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  transform: none !important;
-
-  z-index: 999999;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-
-  margin-bottom: 3.8rem;
-}
-
-#page-home .right-nav button {
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: #fff;
-  padding: 0.8rem 0.2rem;
-  pointer-events: auto;
-}
-
-#page-home .quote {
-  order: 2;
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-
-  width: 88%;
-  margin-bottom: 7rem;
-}
-
-#page-home .hero-center {
-  order: 3;
-}
-
-.inner-right-nav button {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-}
 }
