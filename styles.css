@@ -757,24 +757,6 @@ body {
     margin-top: 0.45rem;
   }
 
-  .right-nav {
-    position: absolute;
-    right: auto;
-    left: 50%;
-    top: auto;
-    bottom: 4.5rem;
-    transform: translateX(-50%);
-    flex-direction: column;
-    gap: 0.95rem;
-    align-items: center;
-  }
-
-  .right-nav a {
-    font-size: 0.82rem;
-    letter-spacing: 0.22em;
-    white-space: nowrap;
-  }
-
   .bg::after {
     background: rgba(4, 8, 35, 0.22);
   }
@@ -975,28 +957,70 @@ body {
     font-size: 0.7rem;
     letter-spacing: 0.22em;
   }
-#page-home .right-nav {
-  position: relative;
-  margin-top: 5rem;
-
+#page-home .page-inner {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1.2rem;
+  padding: 3rem 1.4rem;
+  position: relative;
+}
 
-  z-index: 9999;
+#page-home .right-nav {
+  order: 1;
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+
+  z-index: 99999;
+  pointer-events: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 4rem;
 }
 
 #page-home .right-nav a {
   display: inline-block;
-  font-size: 0.95rem;
-  letter-spacing: 0.24em;
-
-  padding: 0.4rem 1rem;
-
-  cursor: pointer;
   pointer-events: auto;
+  cursor: pointer;
 
-  -webkit-tap-highlight-color: transparent;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  white-space: nowrap;
+
+  padding: 0.8rem 0.2rem;
+}
+
+#page-home .quote {
+  order: 2;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+
+  width: 88%;
+  margin-bottom: 8rem;
+  z-index: 2;
+}
+
+#page-home .hero-center {
+  order: 3;
+  position: relative;
+  z-index: 2;
+}
+
+#page-home .bg,
+#page-home .bg::after {
+  z-index: 0;
+  pointer-events: none;
 }
 }
