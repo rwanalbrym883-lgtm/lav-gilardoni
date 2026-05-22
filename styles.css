@@ -130,18 +130,20 @@ body {
   align-items: flex-end;
 }
 
-.right-nav a {
+.right-nav button {
   font-family: "Cinzel", serif;
   font-weight: 300;
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   letter-spacing: 0.18em;
   color: #fff;
+  background: none;
+  border: none;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s, letter-spacing 0.3s;
 }
 
-.right-nav a:hover {
+.right-nav button:hover {
   color: #897C79;
   letter-spacing: 0.28em;
 }
@@ -206,19 +208,20 @@ body {
   align-items: flex-end;
 }
 
-.inner-right-nav a {
+.inner-right-nav button {
   font-family: "Cinzel", serif;
   font-weight: 300;
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   letter-spacing: 0.18em;
   color: #897C79;
-  text-decoration: none;
+  background: none;
+  border: none;
   cursor: pointer;
   transition: color 0.3s, letter-spacing 0.3s;
 }
 
-.inner-right-nav a:hover,
-.inner-right-nav a.active {
+.inner-right-nav button:hover,
+.inner-right-nav button.active {
   color: #0C488C;
   letter-spacing: 0.28em;
 }
@@ -958,12 +961,8 @@ body {
     letter-spacing: 0.22em;
   }
 #page-home .page-inner {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  padding: 3rem 1.4rem;
-  position: relative;
+  padding: 2.2rem 1.4rem;
 }
 
 #page-home .right-nav {
@@ -975,29 +974,22 @@ body {
   left: auto !important;
   transform: none !important;
 
-  z-index: 99999;
-  pointer-events: auto;
-
+  z-index: 999999;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 
-  margin-bottom: 4rem;
+  margin-bottom: 3.8rem;
 }
 
-#page-home .right-nav a {
-  display: inline-block;
-  pointer-events: auto;
-  cursor: pointer;
-
+#page-home .right-nav button {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   color: #fff;
-  white-space: nowrap;
-
   padding: 0.8rem 0.2rem;
+  pointer-events: auto;
 }
 
 #page-home .quote {
@@ -1008,19 +1000,15 @@ body {
   transform: none !important;
 
   width: 88%;
-  margin-bottom: 8rem;
-  z-index: 2;
+  margin-bottom: 7rem;
 }
 
 #page-home .hero-center {
   order: 3;
-  position: relative;
-  z-index: 2;
 }
 
-#page-home .bg,
-#page-home .bg::after {
-  z-index: 0;
-  pointer-events: none;
+.inner-right-nav button {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
 }
 }
